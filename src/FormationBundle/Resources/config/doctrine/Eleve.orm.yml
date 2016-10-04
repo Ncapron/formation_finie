@@ -1,0 +1,38 @@
+FormationBundle\Entity\Eleve:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\EleveRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        logo:
+            type: string
+            length: 255
+        adresse:
+            type: string
+            length: 255
+        cp:
+            type: integer
+        ville:
+            type: string
+            length: 255
+        tel:
+            type: integer
+        mail:
+            type: string
+            length: 255
+        datenaissance:
+            type: date
+    lifecycleCallbacks: {  }
+
+    manyToMany:
+        promotion:
+            targetEntity: FormationBundle\Entity\Promotion
+            mappedBy: eleve

@@ -1,0 +1,24 @@
+intervenant_index:
+    path:     /
+    defaults: { _controller: "FormationBundle:Intervenant:index" }
+    methods:  GET
+
+intervenant_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationBundle:Intervenant:show" }
+    methods:  GET
+
+intervenant_new:
+    path:     /new
+    defaults: { _controller: "FormationBundle:Intervenant:new" }
+    methods:  [GET, POST]
+
+intervenant_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationBundle:Intervenant:edit" }
+    methods:  [GET, POST]
+
+intervenant_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationBundle:Intervenant:delete" }
+    methods:  DELETE

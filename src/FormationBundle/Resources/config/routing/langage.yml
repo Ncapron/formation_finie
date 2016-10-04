@@ -1,0 +1,24 @@
+langage_index:
+    path:     /
+    defaults: { _controller: "FormationBundle:Langage:index" }
+    methods:  GET
+
+langage_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationBundle:Langage:show" }
+    methods:  GET
+
+langage_new:
+    path:     /new
+    defaults: { _controller: "FormationBundle:Langage:new" }
+    methods:  [GET, POST]
+
+langage_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationBundle:Langage:edit" }
+    methods:  [GET, POST]
+
+langage_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationBundle:Langage:delete" }
+    methods:  DELETE

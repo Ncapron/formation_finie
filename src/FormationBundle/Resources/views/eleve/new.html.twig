@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Eleve creation</h1>
+
+    {{ form_start(form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col m8 offset-m2">
+                <div class="row">
+                    <div class="input-field col s12">
+                        {{ form_label(form.nom) }}
+                        {{ form_widget(form.nom) }}
+                        {{ form_errors(form.nom) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        {{ form_label(form.logo) }}
+                        {{ form_widget(form.logo) }}
+                        {{ form_errors(form.logo) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_label(form.adresse) }}
+                        {{ form_widget(form.adresse) }}
+                        {{ form_errors(form.adresse) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        {{ form_label(form.cp) }}
+                        {{ form_widget(form.cp) }}
+                        {{ form_errors(form.cp) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_label(form.ville) }}
+                        {{ form_widget(form.ville) }}
+                        {{ form_errors(form.ville) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        {{ form_label(form.tel) }}
+                        {{ form_widget(form.tel) }}
+                        {{ form_errors(form.tel) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_label(form.mail) }}
+                        {{ form_widget(form.mail) }}
+                        {{ form_errors(form.mail) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        {{ form_label(form.datenaissance) }}
+                        {{ form_widget(form.datenaissance) }}
+                        {{ form_errors(form.datenaissance) }}
+                    </div>
+                    <div class="input-field col s6">
+                        {{ form_label(form.promotion) }}
+                        {{ form_widget(form.promotion) }}
+                        {{ form_errors(form.promotion) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <input class="btn btn-default edit_admin" type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a class="btn btn-default edit_admin" href="{{ path('eleve_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

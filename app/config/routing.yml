@@ -1,0 +1,3 @@
+formation:
+    resource: "@FormationBundle/Resources/config/routing.yml"
+    prefix:   /

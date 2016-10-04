@@ -1,0 +1,36 @@
+figure {
+    float :left;
+    width : 332px;
+    display :block;
+    padding : 6px;
+    background : white;
+    margin : 0 11px 0px 0;
+    border :solid 1px #888888;
+    border-radius : 8px ;
+    -moz-border-radius : 8px ;
+    -webkit-border-radius : 8px ;
+}
+
+figcaption {
+    font-size : .8em;
+    padding : 6px 8px;
+    background : #dddddd;
+    display :block;
+    text-align :center;
+    font-family : georgia, serif;
+    font-style : italic;
+    border-radius : 0 0 7px 7px ;
+    -moz-border-radius : 0 0 7px 7px ;
+    -webkit-border-radius : 0 0 7px 7px ;
+}
+
+
+img {
+    background : #eeeeee;
+    padding : 5px;
+    border : solid 1px #444444;
+}
+
+.edit_admin{
+    text-align: center;
+}

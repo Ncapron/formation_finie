@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Langage list</h1>
+
+    <figure>
+        <img src="tigre.jpg" alt="Tigre" width="320" height="240" />
+        <figcaption>
+            <h3>Tigre <em lang="la">(Panthera tigris)</em>.</h3>
+            <p>- zoo de Barcelone -</p>
+        </figcaption>
+    </figure>
+
+    <ul>
+        <li>
+            <a href="{{ path('langage_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

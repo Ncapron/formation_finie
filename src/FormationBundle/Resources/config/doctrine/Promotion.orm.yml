@@ -1,0 +1,65 @@
+FormationBundle\Entity\Promotion:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\PromotionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+            unique: true
+        logo:
+            type: string
+            length: 255
+        nomForm:
+            type: string
+            length: 255
+            nullable: true
+            column: nom_form
+        prenomForm:
+            type: string
+            length: 255
+            nullable: true
+            column: prenom_form
+        semaines:
+            type: string
+            length: 255
+        dateDeb:
+            type: date
+            column: date_deb
+        dateFin:
+            type: date
+            column: date_fin
+    lifecycleCallbacks:
+      prePersist: [ preUpload, setCreatedAtValue, setExpiresAtValue ]
+      preUpdate: [ preUpload, setUpdatedAtValue ]
+      postPersist: [ upload ]
+      postUpdate: [ upload ]
+      postRemove: [ removeUpload ]
+
+    manyToOne:
+        module:
+            targetEntity: FormationBundle\Entity\Module
+        langage:
+            targetEntity: FormationBundle\Entity\Langage
+        intervenant:
+            targetEntity: FormationBundle\Entity\Intervenant
+
+
+
+    manyToMany:
+        eleve:
+            targetEntity: FormationBundle\Entity\Eleve
+            inversedBy: promotion
+            joinTable:
+                name: prom_elev
+                joinColumns:
+                    promotion_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    eleve_id:

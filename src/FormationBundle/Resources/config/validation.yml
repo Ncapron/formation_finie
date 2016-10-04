@@ -1,0 +1,5 @@
+FormationBundle\Entity\Promotion:
+    properties:
+        # ...
+        file:
+            - Image: ~

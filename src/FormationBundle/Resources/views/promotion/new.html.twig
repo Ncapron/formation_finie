@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Promotion creation</h1>
+
+    {{ form_start(form) }}
+        <div class="container">
+            <div class="row">
+                <div class="col m8 offset-m2">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label(form.titre) }}
+                            {{ form_widget(form.titre) }}
+                            {{ form_errors(form.titre) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(form.file) }}
+                            {{ form_widget(form.file) }}
+                            {{ form_errors(form.file) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(form.semaines) }}
+                            {{ form_widget(form.semaines) }}
+                            {{ form_errors(form.semaines) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(form.nomForm) }}
+                            {{ form_widget(form.nomForm) }}
+                            {{ form_errors(form.nomForm) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(form.prenomForm) }}
+                            {{ form_widget(form.prenomForm) }}
+                            {{ form_errors(form.prenomForm) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(form.langage) }}
+                            {{ form_widget(form.langage) }}
+                            {{ form_errors(form.langage) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(form.intervenant) }}
+                            {{ form_widget(form.intervenant) }}
+                            {{ form_errors(form.intervenant) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(form.dateDeb) }}
+                            {{ form_widget(form.dateDeb) }}
+                            {{ form_errors(form.dateDeb) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(form.dateFin) }}
+                            {{ form_widget(form.dateFin) }}
+                            {{ form_errors(form.dateFin) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label(form.module) }}
+                            {{ form_widget(form.module) }}
+                            {{ form_errors(form.module) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label(form.eleve) }}
+                            {{ form_widget(form.eleve) }}
+                            {{ form_errors(form.eleve) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <input class="btn btn-default edit_admin" type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a class="btn btn-default edit_admin" href="{{ path('module_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

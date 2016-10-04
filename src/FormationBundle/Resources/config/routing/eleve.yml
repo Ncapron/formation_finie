@@ -1,0 +1,24 @@
+eleve_index:
+    path:     /
+    defaults: { _controller: "FormationBundle:Eleve:index" }
+    methods:  GET
+
+eleve_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationBundle:Eleve:show" }
+    methods:  GET
+
+eleve_new:
+    path:     /new
+    defaults: { _controller: "FormationBundle:Eleve:new" }
+    methods:  [GET, POST]
+
+eleve_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationBundle:Eleve:edit" }
+    methods:  [GET, POST]
+
+eleve_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationBundle:Eleve:delete" }
+    methods:  DELETE

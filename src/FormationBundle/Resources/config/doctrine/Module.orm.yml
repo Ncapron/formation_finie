@@ -1,0 +1,17 @@
+FormationBundle\Entity\Module:
+    type: entity
+    table: null
+    repositoryClass: FormationBundle\Repository\ModuleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numero:
+            type: integer
+        nom:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
